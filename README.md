@@ -1,2 +1,3 @@
-# c-introduccion
-Introducción a C
+# C Introduccion
+
+Introducción práctica a C
