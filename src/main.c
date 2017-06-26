@@ -13,6 +13,11 @@ void declaramosVariablesDeTiposPrimitivosAtomicos() {
 	float decimalDePuntoFlotanteSimplePrecision = 2.3;
 	double decimalDePuntoFlotanteDoblePrecision = 44.3;
 	char enteroDeLongitudByteSinSigno = 'A' + 1;
+
+	enteroConSigno++;
+	decimalDePuntoFlotanteSimplePrecision += 3.0;
+	decimalDePuntoFlotanteDoblePrecision *= 60.9;
+	enteroDeLongitudByteSinSigno--;
 }
 
 void declaramosVariablesUsandoModificadores() {
@@ -24,18 +29,28 @@ void declaramosVariablesUsandoModificadores() {
 	 *
 	 */
 	long int enteroLargoConSigno = 333;
-	unsigned long int enteroLargoSinSigno = -1;
+	unsigned long int enteroLargoSinSigno = 1;
 	long enteroLargoConSigno2 = 33;
 	unsigned enteroSinSigno = 444;
 	short int enteroCortoConSigno = 44;
 	unsigned short enteroCortoSinSigno = 3;
 	signed char byteConSigno = 33;
+
+	++enteroLargoConSigno;
+	enteroLargoSinSigno++;
+	--enteroLargoConSigno;
+	enteroLargoConSigno2--;
+	enteroSinSigno = -1;
+	enteroSinSigno++;
+	enteroCortoConSigno %= 2;
+	enteroCortoSinSigno /= 5;
+	byteConSigno++;
 }
 
 void hacemosSalidaPorPantalla() {
 
 	/* Salida (I/O) */
-	printf("Salida %d, %c, %c, %s, %d, %d, %d, %d \n", 1, 64, 'C', "*C*");
+	printf("Salida %d, %c, %c, %s \n", 1, 64, 'C', "*C*");
 }
 
 void probamosElComportamientoDeChar() {
@@ -43,7 +58,7 @@ void probamosElComportamientoDeChar() {
 	/* Byte / Entero */
 	char letra = 'A';
 	printf("letra %c (%d) \n", letra, letra);
-	letra = 256 + 65;
+	letra = (char) (256 + 65);
 	printf("letra %c (%d) \n", letra, letra);
 }
 
@@ -117,6 +132,7 @@ int main() {
 	/* Tipos de Datos Estructurados indexados */
 	int edades[LONGITUD];
 	edades[0] = 45;
+	edades[LONGITUD - 1] = edades[0];
 	MapaDePesos pesos;
 	pesos[ALTO-1][ANCHO-1] = 56.9;
 	inicializarValores(pesos);
